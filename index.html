@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 Reasons I Adore Diana</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.container {
+  background: white;
+  max-width: 420px;
+  width: 90%;
+  border-radius: 22px;
+  padding: 25px;
+  box-shadow: 0 25px 45px rgba(0,0,0,0.18);
+  animation: fadeIn 1.2s ease;
+}
+
+h1 {
+  text-align: center;
+  color: #ff5e78;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.reason {
+  background: #fff0f3;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+
+.reason-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.number {
+  background: #ff5e78;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.content {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.final {
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+  animation: fadeIn 1.5s ease;
+}
+
+.final img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  margin-bottom: 20px;
+}
+
+.final h2 {
+  color: #ff5e78;
+  margin-bottom: 15px;
+}
+
+.final p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.signature {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>10 Reasons I Adore Diana</h1>
+  <div class="subtitle">tap each one 🤍</div>
+
+  <div class="reason" onclick="openReason(this, 1)">
+    <div class="reason-header"><div class="number">1</div>your mind</div>
+    <div class="content">the way you think and understand the world is genuinely attractive.</div>
+  </div>
+
+  <div class="reason" onclick="openReason(this, 2)">
+    <div class="reason-header"><div class="number">2</div>your beauty</div>
+    <div class="content">not just how you look, but how you glow without trying.</div>
+  </div>
+
+  <div class="reason" onclick="openReason(this, 3)">
+    <div class="reason-header"><div class="number">3</div>your sweetness</div>
+    <div class="content">the gentle way you care and show up never goes unnoticed.</div>
+  </div>
+
+  <div class="reason" onclick="openReason(this, 4)">
+    <div class="reason-header"><div class="number">4</div>your laugh</div>
+    <div class="content">it makes everything feel lighter the moment I hear it.</div>
+  </div>
+
+  <div class="reason" onclick="openReason(this, 5)">
+    <div class="reason-header"><div class="number">5</div>your heart</div>
+    <div class="content">kind, deep, and full of warmth.</div>
+  </div>
+
+  <div class="reason" onclick="openReason(this, 6)">
+    <div class="reason-header"><div class="number">6</div>the way you listen</div>
+    <div class="content">you make people feel seen without even trying.</div>
+  </div>
+
+  <div class="reason" onclick="openReason(this, 7)">
+    <div class="reason-header"><div class="number">7</div>your little habits</div>
+    <div class="content">the small things you do that mean more than you know.</div>
+  </div>
+
+  <div class="reason" onclick="openReason(this, 8)">
+    <div class="reason-header"><div class="number">8</div>your strength</div>
+    <div class="content">the quiet kind that carries you through everything.</div>
+  </div>
+
+  <div class="reason" onclick="openReason(this, 9)">
+    <div class="reason-header"><div class="number">9</div>your presence</div>
+    <div class="content">everything feels better when you’re around.</div>
+  </div>
+
+  <div class="reason" onclick="openReason(this, 10)">
+    <div class="reason-header"><div class="number">10</div>because you’re you</div>
+    <div class="content">and that alone is already more than enough.</div>
+  </div>
+
+  <!-- FINAL UNLOCK -->
+  <div class="final" id="final">
+    <h2>I Choose You</h2>
+    <img src="F43BD122-47B3-4D14-9018-C86A90D1845B.png" alt="Us">
+
+    <p>
+      Diana,<br><br>
+      Looking at this picture reminds me that some connections don’t start by accident.
+      Even back then, there was comfort, closeness, and a kind of joy that didn’t need words.
+      And somehow, no matter how much time passes or how much life changes,
+      that feeling still leads me back to you.
+      <br><br>
+      I don’t choose you because things are perfect.
+      I choose you because they’re real.
+      Because you make me feel safe, understood, and seen.
+      Because loving you feels natural.
+      <br><br>
+      In every version of the future I imagine,
+      it’s you I want beside me.
+    </p>
+
+    <div class="signature">
+      always,<br>me 🤍
+    </div>
+  </div>
+</div>
+
+<script>
+let opened = new Set();
+
+function openReason(el, num) {
+  const content = el.querySelector(".content");
+  if (content.style.display !== "block") {
+    content.style.display = "block";
+    opened.add(num);
+  } else {
+    content.style.display = "none";
+  }
+
+  if (opened.size === 10) {
+    document.getElementById("final").style.display = "block";
+  }
+}
+</script>
+</body>
+</html>
